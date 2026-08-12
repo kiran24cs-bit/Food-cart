@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">hi</p>
+    <input placeholder="hi" id="ok" class="ok"></input>
+    <button>hello</button>
+    <script>
+        let y=document.getElementById("para");
+        let x=document.getElementById("ok");
+        let c=document.createTextNode("hello ");
+        y.appendChild(c);
+        x.setAttribute("placeholder","ihuasgyd");
+        let but=document.querySelector("button");
+        but.disabled=0;
+        but.style.cssText="height:100px;border:solid;background-color:red;cursor:pointer;";
+        //x.placeholder dont work
+    </script>
+</body>
+</html>

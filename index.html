@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="loginsignup.css">
+</head>
+<body>
+    <div id="logindiv">
+        <form id="loginform">
+            <p>Enter mobile number</p>
+            <input type="tel" placeholder="mobile" id="numberinput" required>
+            <p>Enter password</p>
+            <input type="password" placeholder="Password" id="passwordinput" required>
+            <br>
+            <button id="loginbtn" type="submit" onclick="validateuser()">Login</button>
+            <p id="registeropen" onclick="loadregisterdiv()">Don't have an account? Register</p>
+        </form>
+    </div>
+    <div id="registerdiv">
+        <form id="registerform">
+            <p>Enter mobile number</p>
+            <input type="tel" placeholder="mobile" id="numberinputregister" required>
+            <p>Enter password</p>
+            <input type="password" placeholder="Password" id="passwordinputregister" required>
+            <br>
+            <button id="signupbtn" type="submit" onclick="adduser()">Sign up</button>
+            <p id="loginopen" onclick="loadlogindiv()">Already have an account? Login</p>
+        </form>
+    </div>
+    <script src="loginsignup.js"></script>
+</body>
+</html>
