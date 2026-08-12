@@ -18,6 +18,8 @@ function validateuser(){
         errorp.innerText="Fill all fields";
         return;
     }
+    document.getElementById("numberinput").value="";
+    document.getElementById("passwordinput").value="";
     errorp.innerText="";
     console.log(number,password);
 }
@@ -28,6 +30,8 @@ function adduser(){
         errorpr.innerText="Fill all fields";
         return;
     }
+    document.getElementById("numberinputregister").value="";
+    document.getElementById("passwordinputregister").value="";
     errorpr.innerText="";
     console.log(number,password);
 
