@@ -8,26 +8,22 @@
 </head>
 <body>
     <div id="logindiv">
-        <form id="loginform">
             <p>Enter mobile number</p>
             <input type="tel" placeholder="mobile" id="numberinput" required>
             <p>Enter password</p>
             <input type="password" placeholder="Password" id="passwordinput" required>
-            <br>
+            <p id="errorshow"></p>
             <button id="loginbtn" type="submit" onclick="validateuser()">Login</button>
             <p id="registeropen" onclick="loadregisterdiv()">Don't have an account? Register</p>
-        </form>
     </div>
     <div id="registerdiv">
-        <form id="registerform">
             <p>Enter mobile number</p>
             <input type="tel" placeholder="mobile" id="numberinputregister" required>
             <p>Enter password</p>
             <input type="password" placeholder="Password" id="passwordinputregister" required>
-            <br>
+            <p id="errorshowregister"></p>
             <button id="signupbtn" type="submit" onclick="adduser()">Sign up</button>
             <p id="loginopen" onclick="loadlogindiv()">Already have an account? Login</p>
-        </form>
     </div>
     <script src="loginsignup.js"></script>
 </body>
