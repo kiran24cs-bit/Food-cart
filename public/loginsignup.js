@@ -41,7 +41,7 @@ async function validateadmin(){
     document.getElementById("idinputadmin").value="";
     document.getElementById("passwordinputadmin").value="";
     erroradmin.innerText="";
-    let validate=await fetch("./checkadmin/admin",{
+    let validate=await fetch("../checkadmin/admin",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -51,6 +51,7 @@ async function validateadmin(){
     let data= await validate.json();
     if(data.access){
         erroradmin.innerText="Admin verified";
+        window.location.href="adminpage.html";
         return;
     }
     else{
@@ -68,7 +69,7 @@ async function validateuser(){
     document.getElementById("numberinput").value="";
     document.getElementById("passwordinput").value="";
     errorp.innerText="";
-    let validate=await fetch("/userdata",{
+    let validate=await fetch("../userdata/checkuserdata",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -96,7 +97,7 @@ async function adduser(){
     document.getElementById("numberinputregister").value="";
     document.getElementById("passwordinputregister").value="";
     errorpr.innerText="";
-    let datares= await fetch("/adduser",{
+    let datares= await fetch("../userdata/adduser",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

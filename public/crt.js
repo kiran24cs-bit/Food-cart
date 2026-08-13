@@ -1,4 +1,4 @@
-import { DrinksItems , FoodItems } from "./data/allitemdata.js";
+import { DrinksItems , FoodItems } from "../data/allitemdata.js";
 let Drinks=JSON.parse(localStorage.getItem("ALLDRINKSITEMS"));
 let foodItems=JSON.parse(localStorage.getItem("ALLFOODITEMS"));
 if(!Drinks){

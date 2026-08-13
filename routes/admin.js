@@ -1,7 +1,7 @@
 const express=require("express");
 const bcrypt=require("bcrypt");
 const router=express.Router();
-const db=require("./db.js");
+const db=require("../db/db.js");
 router.post("/admin", async (req,res)=>{
         let {adminid , password } =req.body;
     db.query("select admin_password from admin where id=?",[adminid],async (err,result)=>{
