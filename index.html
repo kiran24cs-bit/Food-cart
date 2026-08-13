@@ -5,26 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="stylesheet" href="loginsignup.css">
+    <link rel="icon" href="/images/foodcartlogo.png">
 </head>
 <body>
+    <header class="headerup" >
+        <div class="foodcartimgtext">
+        <img src="/images/foodcartlogo.png" alt="logo">
+        <h3 id="Foodcarttext" >Food Cart</h3>
+        </div>
+        <button id="adminbutton" onclick="loaddiv('admindiv','idinputadmin')" >A</button>
+    </header>
     <div id="logindiv">
             <p>Enter mobile number</p>
-            <input type="tel" placeholder="mobile" id="numberinput" required>
+            <input type="tel" placeholder="mobile" id="numberinput" onkeypress="nextfield(event,'passwordinput')">
             <p>Enter password</p>
-            <input type="password" placeholder="Password" id="passwordinput" required>
+            <input type="password" placeholder="Password" id="passwordinput" onkeypress="btnenter(event,'logindivbtn')">
             <p id="errorshow"></p>
-            <button id="loginbtn" type="submit" onclick="validateuser()">Login</button>
-            <p id="registeropen" onclick="loadregisterdiv()">Don't have an account? Register</p>
+            <button class="divbtn" id="logindivbtn" type="submit" onclick="validateuser()">Login</button>
+            <p id="registeropen" onclick="loaddiv('registerdiv','numberinputregister')">Don't have an account? Register</p>
     </div>
     <div id="registerdiv">
             <p>Enter mobile number</p>
-            <input type="tel" placeholder="mobile" id="numberinputregister" required>
+            <input type="tel" placeholder="mobile" id="numberinputregister" onkeypress="nextfield(event,'passwordinputregister')">
             <p>Enter password</p>
-            <input type="password" placeholder="Password" id="passwordinputregister" required>
+            <input type="password" placeholder="Password" id="passwordinputregister" onkeypress="btnenter(event,'registerdivbtn')">
             <p id="errorshowregister"></p>
-            <button id="signupbtn" type="submit" onclick="adduser()">Sign up</button>
-            <p id="loginopen" onclick="loadlogindiv()">Already have an account? Login</p>
+            <button class="divbtn" id="registerdivbtn" type="submit" onclick="adduser()">Sign up</button>
+            <p id="loginopen" onclick="loaddiv('logindiv','numberinput')">Already have an account? Login</p>
     </div>
+    <div id="admindiv">
+            <p>Enter ID</p>
+            <input type="tel" placeholder="ID" id="idinputadmin" onkeypress="nextfield(event,'passwordinputadmin')">
+            <p>Enter password</p>
+            <input type="password" placeholder="Password" id="passwordinputadmin" onkeypress="btnenter(event,'admindivbtn')">
+            <p id="errorshowadmin"></p>
+            <button class="divbtn" id="admindivbtn" type="submit" onclick="validateadmin()">ADMIN LOGIN</button>
+            <p id="loginopen" onclick="loaddiv('logindiv','numberinput')">Not an admin?</p>
+    </div>
+    <footer>
+        <a href="">Kiran Patil</a>
+    </footer>
     <script src="loginsignup.js"></script>
 </body>
 </html>
